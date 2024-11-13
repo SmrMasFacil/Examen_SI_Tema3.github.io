@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen de Criptografía</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f2f2f2;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .question {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin: 5px 0;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .correct {
+            color: green;
+            font-weight: bold;
+        }
+
+        .incorrect {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Examen de Criptografía</h1>
+
+        <!-- Preguntas y opciones -->
+        <form id="quizForm">
+            <!-- Pregunta 1 -->
+            <div class="question">
+                <p>1. ¿Cuál de los siguientes términos define la “garantía de que la información solo puede ser leída por la persona autorizada”?</p>
+                <label><input type="radio" name="q1" value="A"> A) Integridad</label>
+                <label><input type="radio" name="q1" value="B"> B) Confidencialidad</label>
+                <label><input type="radio" name="q1" value="C"> C) Autenticidad</label>
+                <label><input type="radio" name="q1" value="D"> D) No repudio</label>
+            </div>
+
+            <!-- Pregunta 2 -->
+            <div class="question">
+                <p>2. ¿Cuál es el propósito del criptoanálisis?</p>
+                <label><input type="radio" name="q2" value="A"> A) Crear claves de cifrado seguras</label>
+                <label><input type="radio" name="q2" value="B"> B) Estudiar sistemas criptográficos para encontrar debilidades</label>
+                <label><input type="radio" name="q2" value="C"> C) Proteger mensajes mediante cifrado</label>
+                <label><input type="radio" name="q2" value="D"> D) Autenticar a los usuarios</label>
+            </div>
+
+            <!-- Pregunta 3 -->
+            <div class="question">
+                <p>3. ¿Qué garantiza la integridad de un mensaje?</p>
+                <label><input type="radio" name="q3" value="A"> A) Que solo el emisor puede enviar el mensaje</label>
+                <label><input type="radio" name="q3" value="B"> B) Que el mensaje no ha sido alterado</label>
+                <label><input type="radio" name="q3" value="C"> C) Que el receptor conoce al emisor</label>
+                <label><input type="radio" name="q3" value="D"> D) Que el mensaje es confidencial</label>
+            </div>
+
+            <!-- Pregunta 4 -->
+            <div class="question">
+                <p>4. ¿Cómo se denomina el mensaje sin cifrar?</p>
+                <label><input type="radio" name="q4" value="A"> A) Texto encriptado</label>
+                <label><input type="radio" name="q4" value="B"> B) Texto plano</label>
+                <label><input type="radio" name="q4" value="C"> C) Texto secreto</label>
+                <label><input type="radio" name="q4" value="D"> D) Código</label>
+            </div>
+
+            <!-- Pregunta 5 -->
+            <div class="question">
+                <p>5. ¿Qué representa un texto cifrado?</p>
+                <label><input type="radio" name="q5" value="A"> A) El mensaje original</label>
+                <label><input type="radio" name="q5" value="B"> B) El mensaje en un estado alterado</label>
+                <label><input type="radio" name="q5" value="C"> C) El resultado de aplicar un algoritmo de cifrado</label>
+                <label><input type="radio" name="q5" value="D"> D) La clave pública del receptor</label>
+            </div>
+
+            <!-- Pregunta 6 -->
+            <div class="question">
+                <p>6. ¿Cuál es la característica de una función hash?</p>
+                <label><input type="radio" name="q1" value="A"> A) Generar claves simétricas</label>
+                <label><input type="radio" name="q1" value="B"> B) Transformar datos de tamaño fijo en otros de tamaño variable</label>
+                <label><input type="radio" name="q1" value="C"> C) Transformar datos de cualquier tamaño en otros de tamaño fijo</label>
+                <label><input type="radio" name="q1" value="D"> D) Proteger claves públicas</label>
+            </div>
+            
+            <!-- Pregunta 7 -->
+            <div class="question">
+                <p>7. ¿Qué método de ataque implica probar todas las combinaciones posibles de una clave?</p>
+                <label><input type="radio" name="q2" value="A"> A) Criptoanálisis estadístico</label>
+                <label><input type="radio" name="q2" value="B"> B) Fuerza bruta</label>
+                <label><input type="radio" name="q2" value="C"> C) Cifrado simétrico</label>
+                <label><input type="radio" name="q2" value="D"> D) Ataque intermedio</label>
+            </div>
+            
+            <!-- Pregunta 8 -->
+            <div class="question">
+                <p>8. ¿Cuál es un ejemplo de un algoritmo de cifrado simétrico?</p>
+                <label><input type="radio" name="q3" value="A"> A) RSA</label>
+                <label><input type="radio" name="q3" value="B"> B) ECC</label>
+                <label><input type="radio" name="q3" value="C"> C) DES</label>
+                <label><input type="radio" name="q3" value="D"> D) DSA</label>
+            </div>
+            
+            <!-- Pregunta 9 -->
+            <div class="question">
+                <p>9. ¿Qué tipo de cifrado utiliza pares de claves (pública y privada)?</p>
+                <label><input type="radio" name="q4" value="A"> A) Cifrado simétrico</label>
+                <label><input type="radio" name="q4" value="B"> B) Cifrado híbrido</label>
+                <label><input type="radio" name="q4" value="C"> C) Cifrado asimétrico</label>
+                <label><input type="radio" name="q4" value="D"> D) Función hash</label>
+            </div>
+            
+            <!-- Pregunta 10 -->
+            <div class="question">
+                <p>10. ¿Qué se requiere para descifrar un mensaje en cifrado asimétrico?</p>
+                <label><input type="radio" name="q5" value="A"> A) Clave pública del emisor y clave privada del receptor</label>
+                <label><input type="radio" name="q5" value="B"> B) Clave privada del emisor y clave pública del receptor</label>
+                <label><input type="radio" name="q5" value="C"> C) Ambas claves privadas</label>
+                <label><input type="radio" name="q5" value="D"> D) Ambas claves públicas</label>
+            </div>
+            
+            <!-- Pregunta 11 -->
+            <div class="question">
+                <p>11. ¿Cuál es la longitud de clave más utilizada en el algoritmo AES?</p>
+                <label><input type="radio" name="q6" value="A"> A) 56 bits</label>
+                <label><input type="radio" name="q6" value="B"> B) 128 bits</label>
+                <label><input type="radio" name="q6" value="C"> C) 256 bits</label>
+                <label><input type="radio" name="q6" value="D"> D) 512 bits</label>
+            </div>
+            
+            <!-- Pregunta 12 -->
+            <div class="question">
+                <p>12. ¿Cuál de estos algoritmos fue diseñado específicamente para la generación de firmas digitales?</p>
+                <label><input type="radio" name="q7" value="A"> A) RSA</label>
+                <label><input type="radio" name="q7" value="B"> B) ECC</label>
+                <label><input type="radio" name="q7" value="C"> C) DES</label>
+                <label><input type="radio" name="q7" value="D"> D) DSA</label>
+            </div>
+            
+            <!-- Pregunta 13 -->
+            <div class="question">
+                <p>13. ¿Qué hace el cifrado híbrido?</p>
+                <label><input type="radio" name="q8" value="A"> A) Combina el cifrado simétrico y asimétrico</label>
+                <label><input type="radio" name="q8" value="B"> B) Genera una clave pública y privada para cada mensaje</label>
+                <label><input type="radio" name="q8" value="C"> C) Usa solo claves simétricas</label>
+                <label><input type="radio" name="q8" value="D"> D) Mejora la seguridad con funciones hash</label>
+            </div>
+            
+            <!-- Pregunta 14 -->
+            <div class="question">
+                <p>14. ¿Cuál de estos algoritmos de función hash genera una huella de 512 bits?</p>
+                <label><input type="radio" name="q9" value="A"> A) SHA1</label>
+                <label><input type="radio" name="q9" value="B"> B) MD5</label>
+                <label><input type="radio" name="q9" value="C"> C) SHA-256</label>
+                <label><input type="radio" name="q9" value="D"> D) SHA-512</label>
+            </div>
+            
+            <!-- Pregunta 15 -->
+            <div class="question">
+                <p>15. ¿Qué protocolo seguro utiliza el cifrado AES en redes Wi-Fi?</p>
+                <label><input type="radio" name="q10" value="A"> A) HTTPS</label>
+                <label><input type="radio" name="q10" value="B"> B) WPA2</label>
+                <label><input type="radio" name="q10" value="C"> C) SSL</label>
+                <label><input type="radio" name="q10" value="D"> D) DES</label>
+            </div>
+            
+            <!-- Pregunta 16 -->
+            <div class="question">
+                <p>16. ¿Qué se requiere para que el protocolo TLS funcione en modo mutuo?</p>
+                <label><input type="radio" name="q11" value="A"> A) Solo un certificado digital del servidor</label>
+                <label><input type="radio" name="q11" value="B"> B) Certificado digital del cliente y del servidor</label>
+                <label><input type="radio" name="q11" value="C"> C) Solo una clave privada del cliente</label>
+                <label><input type="radio" name="q11" value="D"> D) Solo una clave pública del servidor</label>
+            </div>
+            
+            <!-- Pregunta 17 -->
+            <div class="question">
+                <p>17. ¿Qué ventaja proporciona la autenticación en el protocolo TLS?</p>
+                <label><input type="radio" name="q12" value="A"> A) Cifrado de mensajes</label>
+                <label><input type="radio" name="q12" value="B"> B) Verificación de la identidad de las partes</label>
+                <label><input type="radio" name="q12" value="C"> C) Reducción del tiempo de conexión</label>
+                <label><input type="radio" name="q12" value="D"> D) Aceleración de la transmisión</label>
+            </div>
+            
+            <!-- Pregunta 18 -->
+            <div class="question">
+                <p>18. ¿Qué permite la firma electrónica según el CERES?</p>
+                <label><input type="radio" name="q13" value="A"> A) La verificación de la identidad en redes públicas</label>
+                <label><input type="radio" name="q13" value="B"> B) Identificar al firmante de un documento digitalmente</label>
+                <label><input type="radio" name="q13" value="C"> C) Cifrar mensajes de correo electrónico</label>
+                <label><input type="radio" name="q13" value="D"> D) Gestionar claves simétricas</label>
+            </div>
+            
+            <!-- Pregunta 19 -->
+            <div class="question">
+                <p>19. ¿Qué elemento proporciona la autoridad certificadora (CA)?</p>
+                <label><input type="radio" name="q14" value="A"> A) Un algoritmo de cifrado</label>
+                <label><input type="radio" name="q14" value="B"> B) Un certificado digital</label>
+                <label><input type="radio" name="q14" value="C"> C) Una función hash</label>
+                <label><input type="radio" name="q14" value="D"> D) Un software de autenticación</label>
+            </div>
+            
+            <!-- Pregunta 20 -->
+            <div class="question">
+                <p>20. ¿Cuál es la diferencia entre una CA raíz y una CA intermedia?</p>
+                <label><input type="radio" name="q15" value="A"> A) La CA raíz puede revocar certificados emitidos por la CA intermedia</label>
+                <label><input type="radio" name="q15" value="B"> B) La CA intermedia puede emitir certificados de la CA raíz</label>
+                <label><input type="radio" name="q15" value="C"> C) Solo la CA intermedia puede validar certificados</label>
+                <label><input type="radio" name="q15" value="D"> D) La CA raíz no puede revocar ningún certificado</label>
+            </div>
+            
+            <!-- Pregunta 21 -->
+            <div class="question">
+                <p>21. ¿Qué implica la infraestructura de clave pública (PKI)?</p>
+                <label><input type="radio" name="q16" value="A"> A) Uso de solo algoritmos simétricos</label>
+                <label><input type="radio" name="q16" value="B"> B) Administración de certificados digitales y claves públicas</label>
+                <label><input type="radio" name="q16" value="C"> C) Eliminación de certificados caducados</label>
+                <label><input type="radio" name="q16" value="D"> D) Generación de claves privadas únicas</label>
+            </div>
+            
+            <!-- Pregunta 22 -->
+            <div class="question">
+                <p>22. ¿Qué característica es clave para la seguridad de los certificados digitales?</p>
+                <label><input type="radio" name="q17" value="A"> A) Tamaño del certificado</label>
+                <label><input type="radio" name="q17" value="B"> B) Procedimiento de revocación</label>
+                <label><input type="radio" name="q17" value="C"> C) Almacenamiento en pendrives</label>
+                <label><input type="radio" name="q17" value="D"> D) Desactivación en navegadores</label>
+            </div>
+            
+            <!-- Pregunta 23 -->
+            <div class="question">
+                <p>23. ¿Qué suele indicar un mensaje de advertencia en el navegador al visitar un sitio HTTPS?</p>
+                <label><input type="radio" name="q18" value="A"> A) El sitio utiliza una clave pública desconocida</label>
+                <label><input type="radio" name="q18" value="B"> B) La conexión no es segura debido a un certificado autofirmado</label>
+                <label><input type="radio" name="q18" value="C"> C) La autoridad certificadora ha caducado</label>
+                <label><input type="radio" name="q18" value="D"> D) El sitio no tiene cifrado en las comunicaciones</label>
+            </div>
+            
+            <!-- Pregunta 24 -->
+            <div class="question">
+                <p>24. ¿Cuál de los siguientes es un método para mejorar la seguridad de una clave digital?</p>
+                <label><input type="radio" name="q19" value="A"> A) Instalarlo en ordenadores compartidos</label>
+                <label><input type="radio" name="q19" value="B"> B) Utilizar claves de longitud corta</label>
+                <label><input type="radio" name="q19" value="C"> C) Guardarlo en un pendrive cifrado</label>
+                <label><input type="radio" name="q19" value="D"> D) Actualizarlo cada dos años</label>
+            </div>
+            
+            <!-- Pregunta 25 -->
+            <div class="question">
+                <p>25. ¿Para qué se usa el algoritmo MD5?</p>
+                <label><input type="radio" name="q20" value="A"> A) Generar huellas de 160 bits</label>
+                <label><input type="radio" name="q20" value="B"> B) Firmar documentos digitalmente</label>
+                <label><input type="radio" name="q20" value="C"> C) Crear una función hash de 128 bits</label>
+                <label><input type="radio" name="q20" value="D"> D) Generar claves públicas</label>
+            </div>
+            
+            <!-- Pregunta 26 -->
+            <div class="question">
+                <p>26. ¿Cuál es la longitud de clave más segura en el algoritmo RSA, según el documento?</p>
+                <label><input type="radio" name="q21" value="A"> A) 128 bits</label>
+                <label><input type="radio" name="q21" value="B"> B) 256 bits</label>
+                <label><input type="radio" name="q21" value="C"> C) 1024 bits</label>
+                <label><input type="radio" name="q21" value="D"> D) 4096 bits</label>
+            </div>
+            
+            <!-- Pregunta 27 -->
+            <div class="question">
+                <p>27. ¿Qué garantiza una función hash?</p>
+                <label><input type="radio" name="q22" value="A"> A) La inviolabilidad de un mensaje</label>
+                <label><input type="radio" name="q22" value="B"> B) Que no se puede obtener el documento original</label>
+                <label><input type="radio" name="q22" value="C"> C) La distribución de claves públicas</label>
+                <label><input type="radio" name="q22" value="D"> D) El cifrado simétrico</label>
+            </div>
+            
+            <!-- Pregunta 28 -->
+            <div class="question">
+                <p>28. ¿Qué objetivo tiene el protocolo HTTPS?</p>
+                <label><input type="radio" name="q23" value="A"> A) Compartir claves simétricas</label>
+                <label><input type="radio" name="q23" value="B"> B) Proteger la confidencialidad e integridad de datos</label>
+                <label><input type="radio" name="q23" value="C"> C) Generar certificados digitales</label>
+                <label><input type="radio" name="q23" value="D"> D) Facilitar la conexión en modo mutuo</label>
+            </div>
+            
+            <!-- Pregunta 29 -->
+            <div class="question">
+                <p>29. ¿Cuál de los siguientes describe un ataque de fuerza bruta?</p>
+                <label><input type="radio" name="q24" value="A"> A) Ataque mediante claves públicas</label>
+                <label><input type="radio" name="q24" value="B"> B) Prueba de todas las combinaciones de claves</label>
+                <label><input type="radio" name="q24" value="C"> C) Generación de un certificado digital falso</label>
+                <label><input type="radio" name="q24" value="D"> D) Intercepción de mensajes cifrados</label>
+            </div>
+            
+            <!-- Pregunta 30 -->
+            <div class="question">
+                <p>30. ¿Por qué es importante la longitud de las claves en criptografía?</p>
+                <label><input type="radio" name="q25" value="A"> A) Porque mejora la eficiencia del sistema</label>
+                <label><input type="radio" name="q25" value="B"> B) Porque determina la cantidad de colisiones</label>
+                <label><input type="radio" name="q25" value="C"> C) Porque incrementa la dificultad de descifrar</label>
+                <label><input type="radio" name="q25" value="D"> D) Porque permite una autenticación más rápida</label>
+            </div>
+            
+            <!-- Botón para verificar el examen -->
+            <button type="button" onclick="verificarRespuestas()">Verificar Examen</button>
+        </form>
+
+        <!-- Resultado de la nota -->
+        <p id="resultado"></p>
+    </div>
+
+    <script>
+        // Respuestas correctas
+        const respuestasCorrectas = {
+            q1: "B", q2: "B", q3: "B", q4: "B", q5: "C",
+            q6: "C", q7: "B", q8: "C", q9: "C", q10: "B",
+            q11: "C", q12: "D", q13: "A", q14: "D", q15: "B",
+            q16: "B", q17: "B", q18: "B", q19: "B", q20: "A",
+            q21: "B", q22: "B", q23: "B", q24: "C", q25: "C",
+            q26: "D", q27: "B", q28: "B", q29: "B", q30: "C"
+        };
+
+        // Verificar respuestas y calcular la nota
+        function verificarRespuestas() {
+            let totalPreguntas = Object.keys(respuestasCorrectas).length;
+            let correctas = 0;
+
+            // Recorre todas las preguntas
+            for (let pregunta in respuestasCorrectas) {
+                let opciones = document.getElementsByName(pregunta);
+                let respuestaCorrecta = respuestasCorrectas[pregunta];
+                let correctaSeleccionada = false;
+
+                opciones.forEach(opcion => {
+                    // Verifica si la respuesta seleccionada es correcta
+                    if (opcion.checked) {
+                        if (opcion.value === respuestaCorrecta) {
+                            correctas++;
+                            correctaSeleccionada = true;
+                            opcion.parentElement.classList.add("correct");
+                        } else {
+                            opcion.parentElement.classList.add("incorrect");
+                        }
+                    }
+
+                    // Marca la respuesta correcta en verde
+                    if (opcion.value === respuestaCorrecta) {
+                        opcion.parentElement.classList.add("correct");
+                    }
+                });
+
+                // Si no se seleccionó la respuesta correcta, se marca en rojo
+                if (!correctaSeleccionada) {
+                    opciones.forEach(opcion => {
+                        if (opcion.value === respuestaCorrecta) {
+                            opcion.parentElement.classList.add("correct");
+                        }
+                    });
+                }
+            }
+
+            // Calcular nota
+            let nota = (correctas / totalPreguntas) * 10;
+            document.getElementById("resultado").textContent = `Has sacado un ${nota.toFixed(2)} sobre 10.`;
+        }
+    </script>
+</body>
+</html>
+
